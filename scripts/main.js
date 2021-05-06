@@ -34,13 +34,13 @@ function onMIDISuccess(midiAccess) {
 //         statusEl.innerHTML = 'status: midi device not found';
 //     }
 // }
-const noteData = [];
+
 function getMIDIMessage(midiMessage) {
     currentNoteCard.innerHTML = '';
     let status = midiMessage.data[0]; // Note on/ Note off
     let note = midiMessage.data[1];
     let velocity = midiMessage.data[2];
-    noteData.push(status, note, velocity);
+
     if (status == 144) {
         currentNoteOn(note, velocity);
         drawVelocityBar(velocity);
