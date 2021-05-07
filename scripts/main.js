@@ -30,7 +30,6 @@ function getMIDIMessage(midiMessage) {
     // If note is pressed
     if (status == 144 || status == 153) {
         getVelocityAvg(velocity);
-        getReps();
     }
     printLog(status, note, velocity);
 }
@@ -53,13 +52,18 @@ function currentNoteOn(status, note, velocity) {
 let results = [];
 function getVelocityAvg(velocity) {
     const avgVelElem = document.querySelector('.avg-velocity');
+    const repsElem = document.querySelector('.repetitions');
     results.push(velocity);
     const avgVel = parseInt(results.reduce((accumulator, velocity) => accumulator + velocity, 0) / results.length);
-    avgVelElem.innerHTML = `avg velocity: ${avgVel}`;
-}
-function getReps() {
-    const repsElem = document.querySelector('.repetitions');
     repsElem.innerHTML = `repetitions: ${results.length}`;
+    avgVelElem.innerHTML = `avg velocity: ${avgVel}`;
+
+    // Reset Session
+    document.querySelector('.session__reset').addEventListener('click', () => {
+        avgVelElem.innerHTML = 'avg velocity: 0';
+        repsElem.innerHTML = 'repetitions: 0';
+        return (results = []);
+    });
 }
 
 function printLog(status, note, velocity) {
@@ -95,5 +99,5 @@ function printLog(status, note, velocity) {
 }
 
 const logCols = document.querySelectorAll('.log__column');
-const rgbButton = document.querySelector('.log__button');
-rgbButton.addEventListener('click', () => randomRGB(null, logCols));
+// RGB
+document.querySelector('.log__button').addEventListener('click', () => randomRGB(null, logCols));
