@@ -55,15 +55,6 @@ h5 {
         'status status2';
 }
 
-.connection-status {
-    grid-area: status2;
-    text-align: right;
-    margin-left: 130px;
-    padding: 5px;
-    height: 30px;
-    width: 300px;
-}
-
 .card {
     background-color: var(--denim);
     color: var(--white);
@@ -102,6 +93,13 @@ h5 {
     margin-top: auto;
 }
 
+#velocity-bar {
+    padding: 10px;
+    z-index: 10;
+    width: 500px;
+    height: 50px;
+}
+
 .card__session {
     grid-area: session;
     margin-top: 0;
@@ -132,9 +130,11 @@ h5 {
     resize: none;
 }
 
-#velocity-bar {
-    padding: 10px;
-    z-index: 10;
-    width: 500px;
-    height: 50px;
+.connection-status {
+    grid-area: status2;
+    text-align: right;
+    margin-left: 130px;
+    padding: 5px;
+    height: 30px;
+    width: 300px;
 }

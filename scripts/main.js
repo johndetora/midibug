@@ -67,6 +67,8 @@ function printLog(status, note, velocity) {
 
     if (status == 217) {
         status = 'aftertouch ';
+        logEl.style.color = 'red';
+        logEl.appned(lineBreak);
         logEl.append(`${status}  ${note + lineBreak}`);
     }
 
