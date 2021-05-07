@@ -19,7 +19,6 @@ body {
     font-family: 'Ubuntu Mono', monospace;
 }
 header {
-    margin: 1% auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -45,11 +44,11 @@ header {
     color: rgba(255, 254, 245, 0.5);
     text-align: center;
 
-    font-size: 8px;
+    font-size: 9px;
 }
 
 .container {
-    margin: 3vh auto;
+    margin: 1vh auto;
     max-width: 900px;
     height: 70vh;
     padding-top: 20px;
@@ -171,6 +170,7 @@ header {
 }
 .log__note--name {
     width: 20%;
+    color: var(--denim);
 }
 .log__velocity {
     width: 18%;
