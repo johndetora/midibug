@@ -177,6 +177,17 @@ header {
     width: 18%;
 }
 
+.log__button {
+    width: 40px;
+    padding: 2px;
+    border: 1px solid var(--white);
+    background-color: var(--white);
+    color: var(--denim);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-left: 200px;
+    outline: none;
+}
 .connection-status {
     grid-area: status2;
     text-align: right;
