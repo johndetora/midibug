@@ -38,6 +38,10 @@ button {
     padding: 2px;
     margin-left: 60%;
 }
+
+span {
+    color: blue;
+}
 .logo__graphic {
     font-size: 6px;
     color: var(--white);
