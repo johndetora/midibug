@@ -138,8 +138,6 @@ h5 {
     content: '\A';
 } */
 .log__column {
-    border: 1px solid red;
-
     height: 100%;
     white-space: pre-wrap;
     text-align: right;
