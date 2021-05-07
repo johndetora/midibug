@@ -40,10 +40,12 @@ h5 {
     margin: 3vh auto;
     max-width: 900px;
     height: 70vh;
+    padding-top: 20px;
     min-height: 500px;
     border-radius: 10px;
     background-color: var(--white);
     display: grid;
+    gap: 10px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 30px;
 
@@ -80,7 +82,7 @@ h5 {
     background-color: var(--white);
     border-radius: 10px;
     color: black;
-    height: 90%;
+    height: 75%;
     width: 90%;
 }
 
@@ -90,18 +92,14 @@ h5 {
     padding: 10px;
 }
 
-.card__current {
-    grid-area: current;
-
-    height: 30%;
-}
-
-.current__note {
-    height: 75%;
-}
-
 .midi-data__value {
     margin: 1rem;
+}
+
+.card__current {
+    grid-area: current;
+    height: 30%;
+    margin-top: auto;
 }
 
 .card__session {
