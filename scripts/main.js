@@ -1,6 +1,7 @@
 import { noteTranslator } from './note-chart.js';
 import { drawVelocityBar } from './velocity-bar.js';
 import { randomRGB } from './randomRGB.js';
+import { printLog } from './print-log.js';
 
 const statusEl = document.querySelector('.connection-status');
 const currentNoteCard = document.querySelector('.status');
@@ -64,38 +65,6 @@ function getVelocityAvg(velocity) {
         repsElem.innerHTML = 'repetitions: 0';
         return (results = []);
     });
-}
-
-function printLog(status, note, velocity) {
-    const logEl = document.querySelector('.log');
-    const statusEl = document.querySelector('.log__status');
-    const noteEl = document.querySelector('.log__note');
-    const noteNameEl = document.querySelector('.log__note--name');
-    const velElem = document.querySelector('.log__velocity');
-    const lineBreak = '\n';
-
-    if (status == 217) {
-        status = 'aftertouch ';
-        statusEl.append(status + lineBreak);
-        noteEl.append(lineBreak);
-        noteNameEl.append(lineBreak);
-        velElem.append(note + lineBreak);
-    }
-
-    // Note on/off
-    if (status == 144 || status == 128) {
-        if (status == 144) {
-            status = 'note on ';
-        } else if (status == 128) {
-            status = 'note off';
-        }
-        statusEl.append(status + lineBreak);
-        noteEl.append(note + lineBreak);
-        noteNameEl.append(`(${noteTranslator(note)})${lineBreak}`);
-        velElem.append(velocity + lineBreak);
-    }
-    // Makes div auto scroll
-    logEl.scrollTop = logEl.scrollHeight;
 }
 
 const logCols = document.querySelectorAll('.log__column');
