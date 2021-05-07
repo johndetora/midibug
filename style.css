@@ -116,18 +116,52 @@ h5 {
     font-family: 'Ubuntu Mono', monospace;
     font-size: 1.3rem;
     letter-spacing: 1px;
-    padding: 20px;
+    padding: 8px 0px;
     margin-bottom: 20px;
     height: 90%;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
 
     /* Reset */
-    border: none;
+    /* border: none;
     overflow: auto;
     outline: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    resize: none;
+    resize: none; */
+}
+
+/* .log__column::before {
+    content: '\A';
+} */
+.log__column {
+    border: 1px solid red;
+
+    height: 100%;
+    white-space: pre-wrap;
+    text-align: right;
+}
+
+.log__status::after {
+    content: ' ';
+}
+
+.log__status {
+    width: 38%;
+    text-align: center;
+}
+
+.log__note {
+    width: 19%;
+}
+.log__note--name {
+    width: 20%;
+}
+.log__velocity {
+    width: 20%;
 }
 
 .connection-status {
