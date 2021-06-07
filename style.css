@@ -81,7 +81,7 @@ span {
     grid-template-areas:
         'current log'
         'session log'
-        'status status2';
+        'synth status2';
     box-shadow: -1px 7px 53px -1px rgba(71, 83, 105, 1);
     -webkit-box-shadow: -1px 7px 53px -1px rgba(71, 83, 105, 1);
     -moz-box-shadow: -1px 7px 53px -1px rgba(71, 83, 105, 1);
@@ -148,6 +148,22 @@ span {
 .session__reset {
     margin-top: 15px;
     width: 50px;
+}
+
+.card__synth {
+    grid-area: session;
+    min-height: 100px;
+    height: 5%;
+    margin-top: 250px;
+}
+
+.card__synth--content {
+    height: 35%;
+    padding: 10px;
+}
+
+.synth__check {
+    color: black;
 }
 .log-container {
     background-color: var(--denim);
