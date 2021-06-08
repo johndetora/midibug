@@ -106,7 +106,7 @@ const synth = new Tone.Synth({
     },
 });
 
-let gain = new Tone.Gain(0.5);
+let gain = new Tone.Gain(0.2);
 
 // Routing
 synth.connect(gain);

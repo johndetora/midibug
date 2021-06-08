@@ -76,7 +76,7 @@ span {
     display: grid;
     gap: 10px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 30px;
+    grid-template-rows: 0.85fr 1fr 30px;
 
     grid-template-areas:
         'current log'
@@ -154,7 +154,7 @@ span {
     grid-area: session;
     min-height: 100px;
     height: 5%;
-    margin-top: 250px;
+    margin-top: 275px;
 }
 
 .card__synth--content {
@@ -164,6 +164,7 @@ span {
 
 .synth__check {
     color: black;
+    cursor: pointer;
 }
 .log-container {
     background-color: var(--denim);
